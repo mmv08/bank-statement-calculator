@@ -42,4 +42,4 @@ bin/
 .DS_Store
 
 ### Bank statements
-src/main/resources/csv/
+src/main/resources/
