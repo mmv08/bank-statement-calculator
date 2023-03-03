@@ -36,7 +36,6 @@ fun main() {
 
     parseStatement()?.forEach() {
         if (it.amount > 0) {
-            println(it.amount)
             totalInbound += it.amount
         } else {
             totalOutbound += it.amount
