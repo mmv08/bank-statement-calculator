@@ -12,7 +12,7 @@ data class Transaction(
 )
 
 fun parseStatement(): List<Transaction>? {
-    val csv = object {}.javaClass.getResourceAsStream("csv/statement1.csv")
+    val csv = object {}.javaClass.getResourceAsStream("csv/statement2.csv")
 
     return csv?.let { it ->
         csvReader().readAllWithHeader(it).map { tx ->
@@ -44,4 +44,5 @@ fun main() {
 
     println("Total Inbound: $totalInbound")
     println("Total Outbound: $totalOutbound")
+    println("Account Balance at the end of the statement: ${totalInbound + totalOutbound}")
 }
